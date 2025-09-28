@@ -1,0 +1,69 @@
+gemini_api_key: "AIzaSyAoqBwJ00VYkfWqCrectX6DN-x59Um-IWo"
+daytona_api_key: dtn_a0c00abf9f2ff2a261a329c8463be01e948fa27a45765d7d58da45bebe47ff14
+
+stability_api_key: "YOUR_STABILITY_API_KEY"
+
+firecrawl_api_key: "YOUR_FIRECRAWL_API_KEY"
+
+# Gemini API Configuration
+
+
+# Daytona API Configuration  
+daytona_url: null
+daytona_target: null
+
+preview_port: 3000
+
+workspace_dir: "workspace_local"
+
+models:
+  primary: "gemini-2.5-pro"
+  fallback: "gemini-2.5-flash"
+
+intelligent_restart:
+  enabled: true
+  # File extensions that won't trigger a server restart
+  skip_extensions:
+    - ".css"
+    - ".md"
+    - ".txt"
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".svg"
+
+# Performance configuration
+performance:
+  max_parallel_uploads: 10
+  sync_batch_size: 50
+  command_timeout: 60
+  server_startup_timeout: 30
+  enable_file_caching: true
+  cache_ttl_seconds: 300
+
+# Security configuration  
+security:
+  allowed_file_extensions:
+    - ".js"
+    - ".ts" 
+    - ".jsx"
+    - ".tsx"
+    - ".css"
+    - ".html"
+    - ".json"
+    - ".md"
+    - ".txt"
+    - ".py"
+    - ".go"
+    - ".rs"
+    - ".java"
+    - ".yml"
+    - ".yaml"
+  max_file_size_mb: 10
+  enable_path_validation: true
+  audit_logging: true
+
+# Feature flags
+debug_mode: true
+backup_enabled: false  # Disabled due to API endpoint issues
+auto_save_history: true
